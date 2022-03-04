@@ -52,5 +52,14 @@ namespace CrudMVC_SQLite.Controllers
             await _contexto.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        public async Task<IActionResult> ExcluirAviao(int aviaoId)
+        {
+            Aviao aviao = await _contexto.Avioes.FindAsync(aviaoId);
+            _contexto.Avioes.Remove(aviao);
+            await _contexto.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

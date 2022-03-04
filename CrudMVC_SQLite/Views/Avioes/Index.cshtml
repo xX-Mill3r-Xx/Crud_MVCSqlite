@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Lista de Cadastro</h1>
 
 <p>
     <a asp-action="NovoAviao" class="btn btn-dark">Novo Avião</a>
@@ -40,7 +40,8 @@
                 <td>
                     <a asp-action="AtualizarAviao" asp-route-aviaoId="@item.AviaoId" class="btn btn-dark">Atualizar avião</a>
                     <form asp-action="ExcluirAviao" asp-route-aviaoId="@item.AviaoId">
-                        <button type="submit" class="btn btn-dark">Excluir</button>
+                        <br />
+                        <button type="submit" class="btn btn-dark">Excluir avião</button>
                     </form>
                 </td>
             </tr>
